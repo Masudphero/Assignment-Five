@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+
+        .font-inter{
+            font-family: "Inter", sans-serif;
+        }
+
+    </style>
+
+</head>
+
+<body class="relative font-inter">
+
+    <header class="fixed w-full bg-[#ffffff80] backdrop-blur-xl z-10">
+
+        <!-- nav bar -->
+        <section class="flex justify-around items-center py-5 bg-[#f9f7f399]">
+
+            <a class="btn border-lime-400 bg-lime-400 px-8 text-xl" href="./blog.html" role="button">Blog</a>
+            <div class="inline-flex items-center gap-3">
+                <img class="h-10" src="./assets/logo.png" alt="">
+                <h1 class="text-xl font-bold hidden md:block">Donate Bangladesh</h1>
+            </div>
+
+            <div class="balance inline-flex items-center gap-3">
+                <img src="./assets/coin.png" alt="">
+                <p class="text-xl font-bold text-gray-600"><span>5500</span> BDT</p>
+            </div>
+
+        </section>
+
+        <!-- center buttons -->
+        <div class="flex justify-center gap-4 pt-9 pb-4">
+            <button class="donation-btn btn border-lime-400 bg-lime-400  px-8 text-xl">Donation</button>
+            <button class="history-btn btn bg-transparent border-gray-400 px-8 text-xl">History</button>
+        </div>
+        
+    </header>
+
+    <div class="pt-48"></div>
+    
+    <hr class="border-gray-100">
+
+    <main>
+
+        <!-- donate section -->
+        <section class="donate-section my-5 space-y-6">
+
+            <!-- dialog box -->
+            <dialog class="fixed top-0 w-full h-full bg-[#80808080] justify-center items-center z-10">
+
+                <div class="w-[500px] h-max bg-white flex flex-col items-center gap-2 p-6 rounded-2xl mx-4 text-center">
+                    <p>masud</p>
+                    <p class="text-4xl font-bold">Congrates!</p>
+                    <img class="w-10" src="./assets/coin.png" alt="">
+                    <p>You Have Donated for Humankind</p>
+                    <p class="text-lg font-bold">Successfully</p>
+                    <button class="btn"" onclick="closeDialog()">close confirmation</button>
+                </div>
+    
+            </dialog>
+    
+            <!-- section 1 -->
+            <div class="flex max-xl:flex-col gap-6 w-11/12 md:w-9/12 mx-auto p-6 border-2 border-blue-200 rounded-2xl">
+    
+                <img src="./assets/noakhali.png"
+                    alt="A rescue team in an orange boat navigates a flooded street in Noakhali, assisting flood-affected individuals">
+    
+                <div class="flex flex-col gap-4 justify-between">
+    
+                    <button class="btn no-animation w-max">
+                        <img src="./assets/coin.png" alt="">
+                        <p class="donation text-gray-500 text-xl font-bold  "><span>10500</span> BDT</p>
+                    </button>
+    
+                    <h2 class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
+                    <p> The name of Noakhali District comes from the town of Noakhali (নোয়াখালী), which was the former headquarters of the old district. It is a compound of two words; Noa (meaning new in Bengali) and Khali (a diminutive of Bengali word khal meaning canal). The history behind its naming is traced back to a canal that was dug in the 1660s in response to devastating floods which had affected the area's agricultural activities. The canal ran from the Dakatia through Ramganj,.</p>
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered" />
+                    <button class="btn bg-lime-400 font-bold text-lg" onclick="donate(this)">Donate Now</button>
+                </div>
+
+            </div>
+    
+            <!-- section 2. -->
+            <div class="flex max-xl:flex-col gap-6 w-11/12 md:w-9/12 mx-auto p-6 border-2 border-blue-200 rounded-2xl">
+    
+                <img src="./assets/feni.png"
+                    alt="Aerial view of severe floods in feni, bangladesh, showcasing submerged landscapes and affected communities">
+    
+                <div class="flex flex-col gap-4 justify-between">
+    
+                    <button class="btn no-animation w-max">
+                        <img src="./assets/coin.png" alt="">
+                        <p class="donation text-xl font-bold text-gray-500"><span>600</span> BDT</p>
+                    </button>
+    
+                    <h2 class="text-2xl font-bold">Donate for Flood Relief in Feni, Bangladesh</h2>
+                    <p>Feni (Bengali: ফেনী) is a coastal district situated in the south-east of Bangladesh, within the Chittagong Division. One of Bangladesh's smallest districts, it is strategically located along the Dhaka–Chittagong transportation corridor. Bordered by India to the north and the Bay of Bengal to the south, it serves as the sole entry point linking Chittagong, the country's primary port city, to the northern districts.</p>
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered" />
+                    <button class="btn bg-lime-400 font-bold text-lg" onclick="donate(this)">Donate Now</button>
+
+                </div>
+    
+            </div>
+    
+            <!-- section 3 -->
+            <div class="flex max-xl:flex-col gap-6 w-11/12 md:w-9/12 mx-auto p-6 border-2 border-blue-200 rounded-2xl">
+    
+                <img src="./assets/quota-protest.png"
+                    alt="A group of protesters from the Quota Movement walking together down a city street, holding signs and banners">
+    
+                <div class="flex flex-col gap-4 justify-between">
+    
+                    <button class="btn no-animation w-max">
+                        <img src="./assets/coin.png" alt="">
+                        <p class="donation text-xl font-bold text-gray-500"><span>2400</span> BDT</p>
+                    </button>
+    
+                    <h2 class="text-2xl font-bold">Aid for Injured in the Quota Movement</h2>
+                    <p>Initially focused on restructuring quota-based systems for government job recruitment, the movement expanded against what many perceive as an authoritarian government when they carried out the July massacre of protestors and civilians, most of whom were students.Initially focused on restructuring quota-based systems for government job recruitment, the movement expanded against what many perceive as an authoritarian government when they carried</p>
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered" />
+                    <button class="font-bold text-lg btn  bg-lime-500 " onclick="donate(this)">Donate Now</button>
+
+                </div>
+    
+            </div>
+
+        </section>
+
+        <!-- history section -->
+        <section class="history-section my-6 space-y-5 hidden">
+            <h2 class="w-11/12 md:w-9/12 mx-auto text-3xl font-bold">Donation History</h2>
+
+        </section>
+
+    </main>
+</body>
+
+<script src="./js/script.js"></script>
+
+</html>
